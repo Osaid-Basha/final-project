@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Mada:wght@200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --Poppins: 'Poppins', sans-serif;
+    --text-color: #000; /* لون النص الأساسي */
+    --background-color: #fff; /* لون الخلفية الأساسي */
+    --link-color: #000; /* لون الروابط */
+    --link-hover-color: #0156FF; /* لون الروابط عند التمرير */
+    --font-size-base: 16px; /* حجم الخط الأساسي */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* لضمان احتساب الحواف الداخلية ضمن الأبعاد */
+}
+
+body {
+    font-family: var(--Poppins, Arial, sans-serif);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: var(--font-size-base);
+    line-height: 1.6; /* ضبط ارتفاع السطر لتحسين قابلية القراءة */
+    height:auto; /* لضبط ارتفاع الجسم لأغراض الاختبار */
+     
+  
+}
+
+a {
+    text-decoration: none;
+    color: var(--link-color);
+    transition: color 0.3s ease; /* إضافة تأثير عند تغيير لون الرابط */
+}
+
+a:hover {
+    color: var(--link-hover-color); /* لون الرابط عند التمرير */
+}
+
+ul {
+    list-style: none;
+    padding-left: 0; /* إزالة المسافة البادئة الافتراضية */
+}
+
+/* إعدادات إضافية لتحسين المظهر العام */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem; /* إضافة مساحة تحت العناوين */
+    font-family: var(--Poppins, Arial, sans-serif);
+}
+
+p {
+    margin-bottom: 1rem; /* إضافة مساحة تحت الفقرات */
+}
+
+.container {
+    
+    margin: 0 auto; /* مركز المحتوى */
+    padding: 0 15px; /* حواف داخلية للحاوية */
+}
+

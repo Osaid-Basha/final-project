@@ -1,0 +1,156 @@
+.review {
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 200px;
+    padding-top: 100px;
+    margin: 0 auto; /* مركز المحتوى في الوسط */
+    padding-left: 20px; /* حواف جانبية */
+    padding-right: 20px;
+    box-sizing: border-box; /* ضمان احتساب الحواف ضمن العرض */
+}
+
+.review .comment {
+    display: flex;
+    gap: 20px;
+  
+    flex-wrap: wrap; /* السماح للعناصر بالالتفاف عند الحاجة */
+    justify-content: center; /* توسيط المحتوى عند الالتفاف */
+}
+
+.review .comment h3 {
+    flex-shrink: 0;
+    font-family: var(--Poppins, Arial, sans-serif);
+    font-size: 55px;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0; /* إزالة الهوامش الافتراضية */
+}
+
+.review .comment p {
+    width: 100%;
+    max-width: 850px;
+    color: #000;
+    font-family: var(--Poppins, Arial, sans-serif);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+}
+
+.review span {
+    height: 36px;
+    color: #000;
+    text-align: right;
+    font-family: var(--Poppins, Arial, sans-serif);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 250px;
+    margin-top: 20px; /* إضافة مسافة فوق النص */
+}
+
+.review .add {
+    height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px; /* مسافة بين العناصر */
+  
+    flex-wrap: wrap; /* السماح للعناصر بالالتفاف عند الحاجة */
+    justify-content: space-around; /* توسيط المحتوى */
+}
+
+.review .add .Leave {
+    display: inline-flex;
+    width: auto;
+    padding: 8px 26px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 30px;
+    border: 2px solid var(--Color---3, #0156FF);
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* تأثير التغيير عند التمرير */
+}
+
+.review .add .Leave h2 {
+    color: var(--Color---3, #0156FF);
+    text-align: center;
+    font-family: var(--Poppins, Arial, sans-serif);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0; /* إزالة الهوامش الافتراضية */
+}
+
+.review .add .Leave:hover {
+    background-color: var(--Color---3, #0156FF); /* تغيير الخلفية عند التمرير */
+    color: #fff; /* تغيير لون النص عند التمرير */
+}
+
+/* Media Queries لتحسين التفاعل مع الأجهزة المختلفة */
+@media (max-width: 992px) {
+    .review .comment {
+        padding-left: 0; /* إزالة الحواف اليسرى على الشاشات المتوسطة */
+    }
+
+    .review .comment h3 {
+        font-size: 40px; /* تقليل حجم الخط للعناوين */
+    }
+
+    .review .add {
+        flex-direction: column; /* تغيير الاتجاه إلى عمودي */
+        gap: 15px; /* تقليل الفجوة بين العناصر */
+    }
+}
+
+@media (max-width: 768px) {
+    .review {
+        padding-top: 50px;
+        padding-bottom: 100px; /* تقليل الحواف العلوية والسفلية */
+    }
+
+    .review .comment h3 {
+        font-size: 35px; /* تقليل حجم الخط للعناوين */
+    }
+
+    .review .comment p {
+        font-size: 16px; /* تقليل حجم الخط للنص */
+    }
+
+    .review .add {
+        padding-left: 0; /* إزالة الحواف اليسرى */
+        gap: 15px; /* تقليل المسافة بين العناصر */
+    }
+
+    .review .add .Leave {
+        width: 100%; /* جعل الأزرار تمتد على كامل عرض الحاوية */
+        justify-content: center; /* توسيط النص داخل الأزرار */
+    }
+}
+
+@media (max-width: 480px) {
+    .review {
+        padding-left: 10px; /* تقليل الحواف على الشاشات الصغيرة جدًا */
+        padding-right: 10px;
+    }
+
+    .review .comment h3 {
+        font-size: 28px; /* تقليل حجم الخط أكثر للعناوين */
+    }
+
+    .review .comment p {
+        font-size: 14px; /* تقليل حجم الخط للنص */
+    }
+
+    .review span {
+        font-size: 12px; /* تقليل حجم الخط للنص */
+    }
+
+    .review .add .Leave {
+        padding: 8px 20px; /* تقليل الحواف الداخلية للأزرار */
+    }
+}

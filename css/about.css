@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+/* تنسيق لوجوهات */
+.logos {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* لضمان أن العناصر ستلتف عند الحاجة */
+    gap: 20px; /* مسافة بين اللوجوهات */
+}
+
+/* تنسيق العنوان */
+.news h2 {
+    color: #000;
+    font-family: var(--Poppins, Arial, sans-serif);
+    font-size: 22px;
+    font-weight: 600;
+    line-height: normal;
+}
+
+/* إعدادات النشرة الإخبارية */
+.news-about {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px; /* مسافة بين العناصر بدلاً من 100px لضمان توافق أفضل مع الشاشات الصغيرة */
+}
+
+/* إعدادات النشرة الإخبارية الفردية */
+.news-about .news-pc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* تأكد من أن العرض هو 100% لضمان توافقه مع الحاوية */
+    max-width: 225px; /* عرض أقصى يضمن أن العناصر لن تكون كبيرة جداً */
+    text-align: center;
+}
+
+.news-about .news-pc img {
+    width: 100%; /* عرض الصورة 100% من الحاوية لضمان أنها متجاوبة */
+    height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع للصورة */
+}
+
+.news-about .news-pc p {
+    color: #000;
+    font-family: var(--Poppins, Arial, sans-serif);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 10px; /* إضافة بعض المسافة العلوية للنص */
+}
+
+/* Media Queries لتحسين التفاعل مع الأجهزة المختلفة */
+@media (max-width: 768px) {
+    .news-about {
+        gap: 10px; /* تقليل المسافة بين العناصر */
+    }
+
+    .news-about .news-pc {
+        max-width: 150px; /* تقليل عرض العناصر لضمان توافقها مع الشاشات الصغيرة */
+    }
+
+    .logos {
+        justify-content: center; /* وضع اللوجوهات في الوسط عند تصغير الشاشة */
+    }
+}
+
+@media (max-width: 480px) {
+    .news-about .news-pc {
+        max-width: 100%; /* السماح للعناصر بالتمدد على كامل العرض على الشاشات الصغيرة جداً */
+    }
+
+    .logos {
+        flex-direction: column; /* تغيير اتجاه اللوجوهات إلى عمودي على الشاشات الصغيرة جداً */
+        align-items: center;
+    }
+}

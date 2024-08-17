@@ -1,0 +1,208 @@
+.fram-out {
+    display: flex;
+    width: 100%; 
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    gap: 20px; /* إضافة فجوة بين العناصر */
+}
+
+.detils {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%; 
+    align-items: center; 
+    padding-bottom: 30px;
+    flex-wrap: wrap; /* السماح للعناصر بالالتفاف عند الحاجة */
+}
+
+.detils h1 {
+    color: #000;
+    font-family: var(--Poppins, Arial, sans-serif);
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0;
+    padding-right: 10px; /* إضافة بعض المسافة بين النص والعناصر المجاورة */
+}
+
+.detils a {
+    color: var(--Color---3, #0156FF);
+    text-align: right;
+    font-family: var(--Poppins, Arial, sans-serif);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 115%; /* 14.95px */
+    text-decoration-line: underline;
+    margin: 0; /* إزالة الهوامش الافتراضية */
+}
+
+.Products {
+    display: flex;
+    gap: 30px;
+        
+    justify-content: center; /* محاذاة العناصر إلى المركز */
+}
+
+.fram {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #FFF;
+    border: 1px solid #ddd; /* إضافة حدود خفيفة حول الحاوية */
+    border-radius: 8px; /* إضافة زوايا مستديرة للحاوية */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف */
+    max-width: 100%; /* ضمان أن العرض لن يتجاوز الحاوية */
+    border: 1px darkgrey solid;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1); 
+}
+
+
+
+.fram .star {
+    display: flex;
+    padding: 10px 0px 6px 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px; /* إضافة فجوة صغيرة بين النجوم */
+}
+
+.fram .star .reviews {
+    color: var(--Color---5, #A2A6B0);
+    text-align: center;
+    font-family: Poppins, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 210%; /* 25.2px */
+    margin-left: 5px; /* إضافة مسافة صغيرة بين النجوم والتعليقات */
+}
+
+.fram h3 {
+    color: #000;
+    font-family: var(--Poppins, Arial, sans-serif);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: normal;
+    margin: 10px 0; /* إضافة مسافة فوق وتحت العنوان */
+}
+
+.fram .cost h2 {
+    color: var(--Color---10, #666);
+    font-family: var(--Poppins, Arial, sans-serif);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 140%; /* 19.6px */
+    text-decoration-line: line-through;
+    margin: 5px 0; /* إضافة مسافة صغيرة بين السعرين */
+}
+
+.fram .cost h3 {
+    color: #000;
+    font-family: var(--Poppins, Arial, sans-serif);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 140%;
+    margin: 0;
+}
+.fram .add-products {
+    
+    display: flex;
+    padding: 8px 20px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 50px;
+    border: 2px solid var(--Color---3, #0156FF);
+    background-color: #fff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease; 
+   
+    
+    
+}
+
+.fram .add-products:hover {
+    background-color: #0156FF; 
+    color: #fff; 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+}
+
+.fram .add-products button {
+    background: none; 
+    border: none;
+    color: #0156FF; 
+    font-family: var(--Poppins);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: normal;
+    cursor: pointer; 
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease; 
+}
+
+.fram .add-products button:hover {
+    color: #fff; 
+}
+
+.fram .add-products button svg {
+    fill: #0156FF; 
+    transition: fill 0.3s ease; 
+}
+
+.fram .add-products button:hover svg {
+    fill: #fff; 
+}
+
+
+
+/* Media Queries لتحسين التفاعل مع الأجهزة المختلفة */
+@media (max-width: 768px) {
+    .Products {
+        gap: 20px; /* تقليل الفجوة بين العناصر */
+    }
+
+    .fram {
+        padding: 15px; /* تقليل الحواف الداخلية */
+    }
+
+    .detils {
+        flex-direction: column; /* تغيير الاتجاه إلى عمودي على الشاشات الصغيرة */
+        align-items: flex-start; /* محاذاة العناصر إلى اليسار */
+        gap: 10px; /* إضافة فجوة بين العنوان والرابط */
+    }
+
+    .detils h1 {
+        font-size: 20px; /* تقليل حجم الخط للعناوين */
+    }
+
+    .detils a {
+        font-size: 12px; /* تقليل حجم الخط للروابط */
+    }
+}
+
+@media (max-width: 480px) {
+    .Products {
+        flex-direction: column; /* تغيير الاتجاه إلى عمودي على الشاشات الأصغر */
+        align-items: center; /* محاذاة العناصر إلى الوسط */
+    }
+
+    .fram {
+        width: 100%; /* جعل العرض 100% على الشاشات الصغيرة جدًا */
+    }
+
+    .detils h1 {
+        font-size: 18px; /* تقليل حجم الخط للعناوين */
+    }
+
+    .detils a {
+        font-size: 11px; /* تقليل حجم الخط للروابط */
+    }
+
+    .fram .cost h3 {
+        font-size: 16px; /* تقليل حجم الخط للسعر */
+    }
+}

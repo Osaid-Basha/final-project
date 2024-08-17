@@ -1,0 +1,54 @@
+.advertisements {
+    width: 100%;
+    height: 328px;
+    position: relative;
+    background-color: lightgray;
+    overflow: hidden; /* لضمان عدم خروج المحتوى عن الحاوية */
+}
+
+.advertisements img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.right-next, .left-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5); /* خلفية نصف شفافة لأزرار التمرير */
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 10; /* لضمان ظهور الأزرار فوق الصورة */
+}
+
+.right-next {
+    left: 1px; /* مسافة من اليسار */
+}
+
+.left-next {
+    right: 1px; /* مسافة من اليمين */
+}
+
+/* Media Queries لتحسين التفاعل مع الأجهزة المختلفة */
+@media (max-width: 768px) {
+    .advertisements {
+        height: 200px; /* تقليل الارتفاع للشاشات الصغيرة */
+    }
+
+    .right-next, .left-next {
+        padding: 8px; /* تقليل حجم الأزرار للشاشات الصغيرة */
+    }
+}
+
+@media (max-width: 480px) {
+    .advertisements {
+        height: 150px; /* تقليل الارتفاع أكثر للشاشات الأصغر */
+    }
+
+    .right-next, .left-next {
+        padding: 6px; /* تقليل حجم الأزرار أكثر */
+    }
+}
