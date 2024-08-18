@@ -416,4 +416,8 @@ document.querySelector('.navbar .icon .open-search').style.display='block';
 document.querySelector('.navbar .icon .close-search').style.display='none';
 }
 )
-
+/*menu */
+document.querySelector('.menu-toggle').addEventListener('click', function() {
+    this.classList.toggle('active');
+    document.querySelector('.navbar ul').classList.toggle('show-menu');
+});

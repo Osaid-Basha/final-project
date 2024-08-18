@@ -678,67 +678,106 @@ padding-left: 20px;
 
 
 /* Media Queries for Responsive Design */
-@media (max-width: 992px) {
-    .navbar ul {
-        gap: 20px; /* Reduce gap between items */
-    }
+/* إخفاء القائمة وتفعيلها بزر التوسيع في الهواتف */
 
-    .navbar .icon {
-        gap: 15px; /* Reduce gap between icons */
-    }
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
 }
 
+/* لجعل القائمة رأسية في الهواتف */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column; /* Stack navbar items vertically */
+        flex-direction: row; 
+        justify-content: space-between; 
+        align-items: center;
         height: auto;
-        padding: 10px 20px; /* Adjust padding */
+        padding: 10px 20px;
+    }
+
+    .menu-toggle {
+        display: block;
     }
 
     .navbar ul {
-        flex-direction: column; /* Stack menu items vertically */
-        align-items: center;
-        gap: 10px;
-        padding-top: 10px;
-    }
-
-    .navbar .logo {
-        margin-bottom: 10px; /* Add some spacing below the logo */
-    }
-
-    .contact-us {
+        display: none; /* إخفاء القائمة افتراضياً */
         flex-direction: column;
-        align-items: flex-start; /* Align items to the start */
-        padding: 15px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     }
 
-    .contact-us h3 {
-        padding-left: 0; /* Remove padding */
-        text-align: left; /* Align text to the left */
+    .navbar ul li {
+        margin-bottom: 10px;
     }
 
-    .contact-us .phone {
-        text-align: left; /* Align text to the left */
-        padding: 10px 0;
-    }
-
-    .contact-us .time {
-        justify-content: flex-start; /* Align time to the left */
+    .navbar ul.show-menu {
+        display: flex;
     }
 }
 
 @media (max-width: 480px) {
     .contact-us h3 {
-        font-size: 10px; /* Reduce font size for smaller screens */
+        font-size: 10px;
     }
 
     .navbar ul li a.style {
-        font-size: 12px; /* Adjust font size */
-        padding: 8px 15px; /* Adjust padding */
+        font-size: 12px;
+        padding: 8px 15px;
     }
 
     .navbar .logo {
-        width: 70px; /* Reduce logo size */
+        width: 70px;
+        height: 55px;
+    }
+
+    .navbar ul {
+        padding: 0 15px;
+    }
+}
+
+/* Toggle menu */
+.menu-toggle.active ~ ul {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Contact Us Section */
+.contact-us {
+    flex-direction:row;
+    align-items: flex-start;
+    padding: 15px;
+}
+
+.contact-us h3, .contact-us .phone {
+    text-align: left;
+    padding: 10px 0;
+}
+
+.contact-us .time {
+    justify-content: flex-start;
+}
+
+@media (max-width: 480px) {
+    .contact-us h3 {
+        font-size: 10px;
+    }
+
+    .navbar ul li a.style {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+
+    .navbar .logo {
+        width: 70px;
         height: 55px;
     }
 }
